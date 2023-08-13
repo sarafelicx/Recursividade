@@ -1,0 +1,18 @@
+public class SomaNaturaisRecursiva {
+
+    public static void main(String[] args) {
+        int n = 5; // Número de naturais para calcular o somatório
+        int resultado = calcularSomatorio(n);
+        System.out.println("Somatório dos " + n + " primeiros números naturais: " + resultado);
+    }
+
+    public static int calcularSomatorio(int n) {
+        // Condição de parada: se n for menor ou igual a 0, retorna 0
+        if (n <= 0) {
+            return 0;
+        } else {
+            // Relação de chamada: chama a função recursivamente com n-1 e soma com n
+            return n + calcularSomatorio(n - 1);
+        }
+    }
+}
